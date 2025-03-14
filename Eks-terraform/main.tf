@@ -34,7 +34,7 @@ data "aws_subnets" "public" {
 }
 #cluster provision
 resource "aws_eks_cluster" "example" {
-  name     = "my-eks-cluster"
+  name     = "EKS_CLOUD"
   role_arn = aws_iam_role.example.arn
 
   vpc_config {
@@ -100,5 +100,3 @@ resource "aws_eks_node_group" "example" {
     aws_iam_role_policy_attachment.example-AmazonEC2ContainerRegistryReadOnly,
   ]
 }
-
-
